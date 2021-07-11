@@ -3,9 +3,15 @@ const mockDBCalls = require('../database/index.js');
 
 const getListOfAgesOfUsersWithHandler = async (request, response) => {
     const itemToLookup = request.query.item;
-    // console.log(itemToLookup)
-    const data = await mockDBCalls.getListOfAgesOfUsersWith(itemToLookup);
-    return response.status(200).send(JSON.stringify(data));
+    console.log(itemToLookup)
+    try {
+        const data = await mockDBCalls.getListOfAgesOfUsersWith(itemToLookup);
+        return response.status(200).send(JSON.stringify(data));
+    } catch (error) {
+        return response.status(400).json({ error: error.toString() });
+    }
+   
+    
 };
 
 module.exports = (app) => {

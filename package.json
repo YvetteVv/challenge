@@ -4,8 +4,8 @@
   "description": "coding challenge",
   "main": "./src/index.js",
   "scripts": {
-    "start": "node ./src/index.js",
-    "dev:server": "nodemon ./index.js",
+    "start": "npm run dev:server && npm run dev:client",
+    "dev:server": "nodemon ./src/index.js",
     "dev:client": "webpack serve --port 8080 --open"
   },
   "author": "walmex-team",
@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
-    "nodemon": "^2.0.11",
+    "nodemon": "^2.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"

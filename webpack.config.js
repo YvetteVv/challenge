@@ -3,8 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    // entry: { index: path.resolve(__dirname, 'src','client','index.js') },
-    entry: "./src/client/index.js",
+    entry: { index: path.resolve(__dirname, 'src','client','index.js') },
+    // entry: './src/client/index.js',
+    // output: {
+    //     path: path.resolve(__dirname, 'public'),
+    // },
     module: {
         rules: [
             {
@@ -23,8 +26,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/client/public/index.html',
+            template: './public/index.html',
             filename: './index.html',
+            favicon: './public/favicon.png',
         }),
     ],
 };

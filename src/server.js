@@ -10,6 +10,9 @@ app.use(cors());
 // register routes
 registerRoutes(app);
 
+//serves the static assets (index.html etc.) from the public folder
+app.use(express.static('public'))
+
 // create server start method
 const start = () => {
     return new Promise((resolve, reject) => {
