@@ -5,9 +5,9 @@ module.exports = {
     mode: 'development',
     entry: { index: path.resolve(__dirname, 'src','client','index.js') },
     // entry: './src/client/index.js',
-    // output: {
-    //     path: path.resolve(__dirname, 'public'),
-    // },
+    output: {
+        path: path.resolve(__dirname, 'src','client','public'),
+    },
     module: {
         rules: [
             {

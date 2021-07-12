@@ -4,7 +4,8 @@
   "description": "coding challenge",
   "main": "./src/index.js",
   "scripts": {
-    "start": "npm-run-all --parallel dev:server dev:client",
+    "start": "node ./src/index.js",
+    "build:client":"webpack --config webpack.config.js",
     "dev:server": "nodemon ./src/index.js",
     "dev:client": "webpack serve --port 8080 --open"
   },

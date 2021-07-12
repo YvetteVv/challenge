@@ -11,7 +11,7 @@ app.use(cors());
 registerRoutes(app);
 
 //serves the static assets (index.html etc.) from the public folder
-app.use(express.static('public'))
+app.use(express.static('src/client/public'))
 
 // create server start method
 const start = () => {
